@@ -11,6 +11,7 @@
 	set_data(begin_cell().store_uint(total, 64).end_cell());
 }
  
+ 
 int get_total() method_id {
 	slice ds = get_data().begin_parse();
  	int total = ds~load_uint(64);
