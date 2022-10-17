@@ -1,5 +1,5 @@
 "Asm.fif" include
-// automatically generated from `/Users/narek/Library/Application Support/toncli/func-libs/stdlib-tests.func` `/Users/narek/Library/Application Support/toncli/func-libs/tests-helpers.func` `/Users/narek/Code/TON-FunC/wallet/tests/example.func` 
+// automatically generated from `/Users/narek/Library/Application Support/toncli/func-libs/stdlib-tests.func` `/Users/narek/Library/Application Support/toncli/func-libs/tests-helpers.func` `/Users/narek/Code/TON-FunC/wallet/tests/example.func`
 PROGRAM{
   85860 DECLMETHOD get_c7
   0 DECLMETHOD test_example_data
@@ -9,7 +9,7 @@ PROGRAM{
   4 DECLMETHOD test_exception_data
   5 DECLMETHOD test_exception
   get_c7 PROCINLINE:<{
-    // 
+    //
     124711402 PUSHINT	//  _2=124711402
     0 PUSHINT	//  _2=124711402 _3=0
     DUP	//  _2=124711402 _3=0 _4=0
@@ -26,7 +26,7 @@ PROGRAM{
     SINGLE	//  _16
   }>
   test_example_data PROC:<{
-    // 
+    //
     0 PUSHINT	//  function_selector=0
     10 PUSHINT	//  function_selector=0 _3=10
     NEWC	//  function_selector=0 _3=10 _4
@@ -58,7 +58,7 @@ PROGRAM{
     102 THROWIF
   }>
   test_get_total_data PROC:<{
-    // 
+    //
     128253 PUSHINT	//  function_selector=128253
     0 TUPLE	//  function_selector=128253 stack
     10 PUSHINT	//  function_selector=128253 stack _6=10
@@ -81,7 +81,7 @@ PROGRAM{
     104 THROWIF
   }>
   test_exception_data PROC:<{
-    // 
+    //
     0 PUSHINT	//  function_selector=0
     30 PUSHINT	//  function_selector=0 _3=30
     NEWC	//  function_selector=0 _3=30 _4

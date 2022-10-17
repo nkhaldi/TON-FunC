@@ -1,14 +1,14 @@
 [int, tuple, cell, tuple, int] test_example_data() method_id(0) {
 	int function_selector = 0;
 
-	cell message = begin_cell()     
-			.store_uint(10, 32)          
+	cell message = begin_cell()
+			.store_uint(10, 32)
 			.end_cell();
 
-	tuple stack = unsafe_tuple([message.begin_parse()]); 
+	tuple stack = unsafe_tuple([message.begin_parse()]);
 
-	cell data = begin_cell()             
-		.store_uint(0, 64)              
+	cell data = begin_cell()
+		.store_uint(0, 64)
 		.end_cell();
 
 	return [function_selector, stack, data, get_c7(), null()];
@@ -20,18 +20,18 @@ _ test_example(int exit_code, cell data, tuple stack, cell actions, int gas) met
 
 	var ds = data.begin_parse();
 
-	throw_if(101, ds~load_uint(64) != 10); 
-	throw_if(102, gas > 1000000); 
+	throw_if(101, ds~load_uint(64) != 10);
+	throw_if(102, gas > 1000000);
 }
 
 
 [int, tuple, cell, tuple, int] test_get_total_data() method_id(2) {
-	int function_selector = 128253; 
+	int function_selector = 128253;
 	
-	tuple stack = unsafe_tuple([]); 
+	tuple stack = unsafe_tuple([]);
 
-	cell data = begin_cell()            
-		.store_uint(10, 64)              
+	cell data = begin_cell()
+		.store_uint(10, 64)
 		.end_cell();
 
 	return [function_selector, stack, data, get_c7(), null()];
@@ -39,23 +39,23 @@ _ test_example(int exit_code, cell data, tuple stack, cell actions, int gas) met
 
 
 _ test_get_total(int exit_code, cell data, tuple stack, cell actions, int gas) method_id(3) {
-	throw_if(103, exit_code != 0); 
-	int counter = first(stack); 
-	throw_if(104, counter != 10); 
+	throw_if(103, exit_code != 0);
+	int counter = first(stack);
+	throw_if(104, counter != 10);
 }
 
 
 [int, tuple, cell, tuple, int] test_exception_data() method_id(4) {
 	int function_selector = 0;
 
-	cell message = begin_cell()     
-			.store_uint(30, 31)           
+	cell message = begin_cell()
+			.store_uint(30, 31)
 			.end_cell();
 
 	tuple stack = unsafe_tuple([message.begin_parse()]);
 
-	cell data = begin_cell()            
-		.store_uint(0, 64)               
+	cell data = begin_cell()
+		.store_uint(0, 64)
 		.end_cell();
 
 	return [function_selector, stack, data, get_c7(), null()];
